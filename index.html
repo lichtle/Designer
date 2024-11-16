@@ -17,6 +17,10 @@
         src: url("assets/GentyDemo-Regular.ttf");
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -144,7 +148,7 @@
         flex-wrap: wrap;
       }
 
-      .projects p {
+      .projects p:not(.card p) {
         text-align: center;
         margin-bottom: 32px;
       }
@@ -159,7 +163,6 @@
         gap: 32px;
         padding: 24px;
         border-radius: 16px;
-        height: 100%;
       }
 
       .card a,
@@ -172,13 +175,32 @@
         padding: 8px;
       }
 
+      .projects {
+        background-image: url(images/blobs.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
       .projects h2 {
         font-size: 40px;
         color: #f078b8;
       }
 
+      .projects p:not(.card p) {
+        margin: 56px 0;
+      }
+
+      .card {
+        height: 400px;
+        width: 336px;
+      }
+
       .card img {
-        width: 300px;
+        height: 250px;
+      }
+
+      .card img.smaller-image {
+        height: 200px;
       }
 
       .small {
@@ -222,6 +244,45 @@
       footer {
         font-family: "Montserrat", sans-serif;
         color: #f078b8;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          max-width: 80%;
+        }
+
+        header .container,
+        nav ul,
+        .hero {
+          flex-direction: column;
+        }
+
+        header .container {
+          gap: 32px;
+        }
+
+        header nav ul {
+          gap: 8px;
+        }
+
+        .hero img {
+          width: 100%;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .card img.smaller-image {
+          height: 180px;
+        }
+
+        .projects {
+          background-size: contain;
+          background-repeat: repeat;
+        }
       }
     </style>
   </head>
@@ -231,15 +292,15 @@
         <img src="images/logo_extended.png" alt="Logo" />
         <nav>
           <ul>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Projetos</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="container">
-      <section class="hero">
+      <section class="hero" id="about">
         <img src="images/profile_card.png" alt="Logo" />
         <div class="text">
           <h1>Prazer, sou a Leticia!</h1>
@@ -258,7 +319,7 @@
           </p>
         </div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <h2>Portfolio</h2>
         <p>
           Vamos trabalhar a presença online da sua marca? Veja abaixo o que
@@ -278,11 +339,11 @@
             <p>Cardápios</p>
           </div>
           <div class="card">
-            <img src="images/mockup4.png" alt="Mockup" />
+            <img src="images/mockup4.png" alt="Mockup" class="smaller-image" />
             <p>Posts para Instagram</p>
           </div>
         </div>
-        <p>
+        <p id="contact">
           E aí, vamos vender mais juntos? Entre em contato comigo através do meu
           e-mail (<a href="mailto:leticia.negreiros@outlook.com"
             >leticia.negreiros@outlook.com</a
@@ -297,7 +358,7 @@
     </main>
     <footer>© 2024 Leticia Fernandes. Todos os direitos reservados.</footer>
     <a
-      href="https://wa.me/+5511933461305/?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20SpotHub."
+      href="https://wa.me/+5535987044117/?text=Olá!%20Quero%20saber%20mais%20sobre%20seus%20trabalhos."
       target="_blank"
       class="whatsapp-logo"
       ><img src="images/whatsapp.png" alt="Fale conosco!"
