@@ -192,15 +192,20 @@
 
       .card {
         height: 400px;
-        width: 336px;
+        width: 100%;
+        max-width: 336px;
       }
 
       .card img {
         height: 250px;
       }
 
-      .card img.smaller-image {
+      .card img.small-image {
         height: 200px;
+      }
+
+      .card img.smaller-image {
+        height: 150px;
       }
 
       .small {
@@ -312,7 +317,7 @@
         <img src="images/profile.png" alt="Logo" />
         <div class="text">
           <h1>Prazer, sou a Leticia!</h1>
-          <h2>Faço cardápios, sites e muito mais</h2>
+          <h2>Faço logos, sites, cardápios e muito mais</h2>
           <p>
             Tenho 25 anos e moro em Santo André - SP. Sou desenvolvedora
             front-end certificada pela EBAC, designer em formação (certificada
@@ -340,7 +345,7 @@
             <p>Apps</p>
           </div>
           <div class="card">
-            <img src="images/mockup2.png" alt="Mockup" />
+            <img src="images/mockup2.png" alt="Mockup" class="small-image" />
             <p>Sites</p>
           </div>
           <div class="card">
@@ -348,8 +353,20 @@
             <p>Cardápios</p>
           </div>
           <div class="card">
-            <img src="images/mockup4.png" alt="Mockup" class="smaller-image" />
+            <img src="images/mockup5.png" alt="Mockup" />
             <p>Posts para Instagram</p>
+          </div>
+          <div class="card">
+            <img src="images/logos.png" alt="Mockup" class="small-image" />
+            <p>Logos</p>
+          </div>
+          <div class="card">
+            <img
+              src="images/logo_extended.png"
+              alt="Mockup"
+              class="smaller-image"
+            />
+            <p>Cartões de visita, branding, currículos, anúncios e mais!</p>
           </div>
         </div>
         <p id="contact">
